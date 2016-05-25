@@ -1,0 +1,36 @@
+﻿
+<h1 style="margin-left:30px;">Kontakti</h1>
+
+<br/>
+<div style="margin-left:30px;width:500px;">
+<a href="#/AddContact" class="btn btn-primary">Dodaj kontakt</a>
+<br />   
+<br /> 
+    <div style="width:300px;">
+        <input type="text" ng-model="search" class="form-control" placeholder="Upiši pojam za pretraživanje">
+    </div> 
+    <br /> 
+    <table class="table table-bordered">
+        <tr style="background-color:lightblue;">
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Adresa</th>
+            <th>Telefon</th>
+            <th>Tag</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+        </tr>
+  
+        <tr ng-repeat="kontakt in listKontakti|filter:search">
+            <td>{{kontakt.Ime}}</td>
+            <td>{{kontakt.Prezime}}</td>
+            <td>{{kontakt.Adresa}}</td>
+            <td>{{kontakt.Telefon}}</td>
+            <td>{{kontakt.Tag}}</td>
+            <td>{{kontakt.Email}}</td>
+            <td><a href="#/EditContact/{{kontakt.KontaktId}}">Uredi</td>
+            <td><a href="#/" ng-click="DeleteContact(kontakt.KontaktId,$index)">Izbrisi</td>
+        </tr>
+    </table>
+</div>

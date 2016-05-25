@@ -1,0 +1,36 @@
+﻿<h1 style="margin-left:30px;">Uredi kontakt</h1>
+<br />
+
+<div style="margin-left:30px;width:400px;">
+<form name="EditContactForm" ng-submit="EditContact();" class="form-group-sm">
+    <div class="form-group">
+        <label for="kontakt.Ime">Ime</label>
+        <input type="text" class="form-control" ng-model="kontakt.Ime" required />
+    </div>
+    <div class="form-group">
+        <label for="kontakt.Prezime">Prezime</label>
+        <input type="text" class="form-control" ng-model="kontakt.Prezime" required />
+    </div>
+    <div class="form-group">
+        <label for="kontakt.Adresa">Adresa</label>
+        <input type="text" class="form-control" ng-model="kontakt.Adresa" required />
+    </div>
+    <div class="form-group">
+        <label for="kontakt.Telefon">Telefon</label>
+        <input type="text" class="form-control" ng-model="kontakt.Telefon" required />
+    </div>
+    <div class="form-group">
+        <label for="kontakt.Tag">Tag</label>
+        <input type="text" class="form-control" ng-model="kontakt.Tag" required />
+    </div>
+    <div class="form-group">
+        <label for="kontakt.Email">Email</label>
+        <input type="email" class="form-control" ng-model="kontakt.Email" required />
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-success" value="Izmijeni" ng-disabled="EditContactForm.$invalid" />
+    </div>
+</form>
+<br />
+<a href="#/" class="btn btn-primary">Nazad na početnu</a>
+</div>
